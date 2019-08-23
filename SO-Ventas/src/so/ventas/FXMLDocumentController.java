@@ -66,6 +66,8 @@ Conexion con =  new Conexion();
     public ComboBox cbProductos;
     @FXML
     private Button btnIn;
+    @FXML
+    private TextField txtIva;
      
 
     @Override

@@ -30,6 +30,7 @@
         </TableView>
         <Label fx:id="lbTotal" layoutX="375.0" layoutY="400.0" text="Total:" />
         <TextField fx:id="txtTotal" layoutX="417.0" layoutY="396.0" prefHeight="25.0" prefWidth="107.0" />
+        <TextField fx:id="txtIva" layoutX="200.0" layoutY="396.0" prefHeight="25.0" prefWidth="107.0" />
         <Label fx:id="lbSubtitulo" layoutX="86.0" layoutY="421.0" text="Menu Productos">
             <font>
                 <Font size="14.0" />
@@ -38,7 +39,7 @@
         <Button id="btnRegistrar" fx:id="btnRegistrar" layoutX="74.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnRegAction" text="Registrar" />
         <Button id="btnModificar" fx:id="btnModificar" layoutX="227.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnModAction" text="Modificar" />
         <Button id="btnEliminar" fx:id="btnEliminar" layoutX="376.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnElimAction" text="Eliminar" />
-        <Button id="btnBorrar" fx:id="btnBorrar" layoutX="305.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handlebtnBorrarAction" text="Borrar" />
+        <Button id="btnBorrar" fx:id="btnBorrar" layoutX="100.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handlebtnBorrarAction" text="Borrar" />
         <Button id="btnAñadir" fx:id="btnAñadir" layoutX="555.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#handlebtnAñadirAction" text="Añadir" />
       <Label fx:id="lbProductos1" layoutX="304.0" layoutY="64.0" text="Cantidad:" />
       <ComboBox id="cbProductos" fx:id="cbProductos" layoutX="145.0" layoutY="60.0" onMouseClicked="#handlecbProductosAction" prefWidth="150.0" />
