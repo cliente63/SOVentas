@@ -66,8 +66,6 @@ Conexion con =  new Conexion();
     public ComboBox cbProductos;
     @FXML
     private Button btnIn;
-    @FXML
-    private Button btnR;
      
 
     @Override
@@ -156,9 +154,5 @@ Conexion con =  new Conexion();
         vend.IrInv();
     }
 
-    @FXML
-    private void handlebtnRAction(MouseEvent event) {
-        pr.llenarCB(cbProductos, "Inventario", "Producto");
-    }
     
 }

@@ -120,6 +120,7 @@ Conexion cn=new Conexion ();
        ResultSet rs=con.consultar(tabla, "");
        while (rs.next()){
                 ol.add(rs.getString(columna));
+                //ol.addAll("1","2","3");
             }
        cb.setItems(ol);
        } catch (SQLException ex) {
