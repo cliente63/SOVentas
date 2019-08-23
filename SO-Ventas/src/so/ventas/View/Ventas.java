@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ 
  * @author Soful
  */
 public class Ventas {
