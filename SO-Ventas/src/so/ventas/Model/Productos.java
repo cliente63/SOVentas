@@ -5,13 +5,8 @@
  */
 package so.ventas.Model;
 
-import so.ventas.Model.Datos2;
-import so.ventas.Model.Datos;
-import so.ventas.Model.Conexion;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
@@ -20,7 +15,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 /**
  *
@@ -120,4 +114,17 @@ Conexion cn=new Conexion ();
         pre.add(Precio);
         sub.add(Sub);
    }
+   public void llenarCB(ComboBox cb,String tabla,String columna){
+       try{
+       ObservableList<String> ol=FXCollections.observableArrayList();
+       ResultSet rs=con.consultar(tabla, "");
+       while (rs.next()){
+                ol.add(rs.getString(columna));
+            }
+       cb.setItems(ol);
+       } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "NO Conectado ");
+        } 
+   }
+   
 }

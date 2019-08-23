@@ -14,7 +14,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 /**
  *
@@ -46,23 +45,20 @@ public class Conexion {
        }
     }
     
-    
-    public void consultarProducto(ComboBox cb){
+    public ResultSet consultar(String tabla, String cond){
         try {
-            String inst = "select * from Inventario";
+            String inst = "select * from "+tabla+cond+";";
             
             statement = cn.createStatement();
             statement.executeQuery(inst);
             rs = statement.getResultSet();
-            ObservableList<String> ol=FXCollections.observableArrayList();
-            while (rs.next()){
-                ol.add(rs.getString(1));
-            }
-            cb.setItems(ol);
+            return rs;
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "NO Conectado ");
         }   
+        return null;
     }
+    
     public String consultarPrecio(String producto){
         String precio="";
         try {

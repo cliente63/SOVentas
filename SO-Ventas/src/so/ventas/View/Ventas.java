@@ -4,18 +4,13 @@
  * and open the template in the editor.
 JMeter
  */
-package so.ventas.Model;
+package so.ventas.View;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *

@@ -21,6 +21,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import so.ventas.Model.Conexion;
+import so.ventas.Model.Productos;
 
 /**
  * FXML Controller class
@@ -29,6 +30,7 @@ import so.ventas.Model.Conexion;
  */
 public class ModificacionController implements Initializable {
 Conexion con= new Conexion();
+Productos pr=new Productos();
     @FXML
     private AnchorPane apMod;
     @FXML
@@ -48,7 +50,7 @@ Conexion con= new Conexion();
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        con.consultarProducto(cbProd);
+        pr.llenarCB(cbProd, "Inventario", "Producto");
     }    
     @FXML
     private void handlebtnActualizarAction(MouseEvent event) {

@@ -44,5 +44,6 @@
       <ComboBox id="cbProductos" fx:id="cbProductos" layoutX="145.0" layoutY="60.0" onMouseClicked="#handlecbProductosAction" prefWidth="150.0" />
       <Button id="btnConsulta" fx:id="btnConsulta" layoutX="501.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnConsultaAction" text="Ventas" />
       <Button id="btnIn" fx:id="btnIn" layoutX="501.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#handlebtnInAction" text="Inventario" />
+        <Button id="btnR" fx:id="btnR" layoutX="501" layoutY="500" mnemonicParsing="false" onMouseClicked="#handlebtnRAction" text="R" />
     </children>
 </AnchorPane>
