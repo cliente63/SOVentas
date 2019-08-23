@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="so.ventas.RegistroController">
+   <children>
+      <Label id="lbTituloReg" fx:id="lbTituloReg" layoutX="174.0" layoutY="30.0" text="Registro">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="lbProductoReg" fx:id="lbProductoReg" layoutX="38.0" layoutY="103.0" text="Producto:" />
+      <TextField id="txtProRegistro" fx:id="txtProRegistro" layoutX="104.0" layoutY="99.0" />
+      <Label id="lbCantidadReg" fx:id="lbCantidadReg" layoutX="40.0" layoutY="149.0" text="Cantidad:" />
+      <TextField id="txtCantidadReg" fx:id="txtCantidadReg" layoutX="104.0" layoutY="145.0" />
+      <Label fx:id="lbPrecioReg" layoutX="48.0" layoutY="192.0" text="Precio:" />
+      <TextField id="txtPrecioRegistro" fx:id="txtPrecioRegistro" layoutX="104.0" layoutY="188.0" />
+      <Button id="btnRegistrar" fx:id="btnRegistrar" layoutX="300.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#handlebtnRegistrarAction" text="Registrar" />
+      
+   </children>
+</AnchorPane>
