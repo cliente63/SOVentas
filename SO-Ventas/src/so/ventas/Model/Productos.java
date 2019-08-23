@@ -33,7 +33,7 @@ Conexion cn=new Conexion ();
         
     }
     
-   public void añadir(TableColumn Producto,TableColumn Cantidad,TableColumn Precio,TableColumn Subtotal, TableView tab, TextField tf, ComboBox cb, TextField total){
+   public void añadir(TableColumn Producto,TableColumn Cantidad,TableColumn Precio,TableColumn Subtotal, TableView tab, TextField tf, ComboBox cb, TextField total,TextField iva){
        
        Producto.setCellValueFactory(new PropertyValueFactory<>("producto"));
        Precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
@@ -43,10 +43,10 @@ Conexion cn=new Conexion ();
        String prod=cb.getSelectionModel().getSelectedItem().toString();
        String can=tf.getText();
        String t=total.getText();
-        
+       Float i=Float.valueOf(iva.getText())/100;
         if(!can.equals("")){
             String pre=cn.consultarPrecio(prod);
-            Float tot=Float.valueOf(can)*Float.valueOf(pre);
+            Float tot=Float.valueOf(can)*Float.valueOf(pre)*i;
             total.setText(actualizarTotal(t,tot).toString());
             
             Datos p1 = new Datos(prod,pre,can,tot.toString());
@@ -93,9 +93,9 @@ Conexion cn=new Conexion ();
        tab.getItems().clear();
        total.setText("0.0");
    }
-   public void vender(TableView taba,TextField t){
+   public void vender(TableView taba,TextField t,String iva){
        for (int i = 0; i < pro.size(); i++) {
-            con.nuevaVenta(pro.get(i),can.get(i),pre.get(i),sub.get(i));
+            con.nuevaVenta(pro.get(i),can.get(i),pre.get(i),sub.get(i),iva);
             con.Descontar(pro.get(i), can.get(i));
        }
        JOptionPane.showMessageDialog(null, "Venta Realizada ");
@@ -120,7 +120,7 @@ Conexion cn=new Conexion ();
        ResultSet rs=con.consultar(tabla, "");
        while (rs.next()){
                 ol.add(rs.getString(columna));
-                //ol.addAll("1","2","3");
+                
             }
        cb.setItems(ol);
        } catch (SQLException ex) {

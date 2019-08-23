@@ -74,7 +74,7 @@ Conexion con =  new Conexion();
         pr.llenarTotal(txtTotal);
     }  
     public void actualizarTotal(){
-        if(tbVentas.getItems().size()!=0){
+        if(!tbVentas.getItems().isEmpty()){
             float suma=0;
             for (int i = 0; i < tbVentas.getItems().size(); i++) {
                     suma+=Float.valueOf((String)cmSubtotal.getCellData(i));
@@ -88,13 +88,14 @@ Conexion con =  new Conexion();
     
     private void enviarVenta(){
         //con.Conectar();
-        if(tbVentas.getItems().size()!=0){
+        if(!tbVentas.getItems().isEmpty()){
             for (int i = 0; i < tbVentas.getItems().size(); i++) {
                     String pro= (String) cmProducto.getCellData(i);
                     String can=(String) cmCantidad.getCellData(i);
                     String pre=(String) cmPrecio.getCellData(i);
                     String t=(String) cmSubtotal.getCellData(i);
-                   // cn.enviarVenta(pro,can,pre,t);
+                    
+                   //cn.enviarVenta(pro,can,pre,t);
                 }
             JOptionPane.showMessageDialog(null, "Venta realizada");
           tbVentas.getItems().clear();
@@ -109,7 +110,7 @@ Conexion con =  new Conexion();
     
     @FXML
     public void handlebtnVenderAction(MouseEvent event) {
-        pr.vender(tbVentas,txtTotal);
+        pr.vender(tbVentas,txtTotal,txtIva.getText());
     }
 
     @FXML
@@ -134,7 +135,7 @@ Conexion con =  new Conexion();
 
     @FXML
     public void handlebtnAñadirAction(MouseEvent event) {
-       pr.añadir(cmProducto,cmCantidad,cmPrecio,cmSubtotal,tbVentas,txtCantidad,cbProductos,txtTotal);
+       pr.añadir(cmProducto,cmCantidad,cmPrecio,cmSubtotal,tbVentas,txtCantidad,cbProductos,txtTotal,txtIva);
     }
 
     @FXML

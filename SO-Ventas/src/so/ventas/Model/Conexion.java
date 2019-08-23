@@ -106,10 +106,10 @@ public class Conexion {
             JOptionPane.showMessageDialog(null, "NO Conectado ");
         }
     }
-     public void nuevaVenta(String pro, String can, String pre,String sub){
+     public void nuevaVenta(String pro, String can, String pre,String sub,String iva){
         try{
             statement=cn.createStatement();
-                int nv=statement.executeUpdate("Insert into Ventas(Producto,Cantidad,Precio,Total) values('"+pro+"',"+can+",'"+pre+"','"+sub+"');");
+                int nv=statement.executeUpdate("Insert into Ventas(Producto,Cantidad,Precio,Total,IVA) values('"+pro+"',"+can+",'"+pre+"','"+sub+"','"+iva+");");
                 //JOptionPane.showMessageDialog(null, "Agregado");
             
         }
