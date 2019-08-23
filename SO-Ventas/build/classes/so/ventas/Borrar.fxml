@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apMod" prefHeight="200.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="so.ventas.ModificacionController">
+   <children>
+      
+      
+      <Label fx:id="lbTituloElim" layoutX="80" layoutY="38.0" text="Eliminacion">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" layoutX="406.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#handlebtnEliminarAction" text="Eliminar" />
+      <ComboBox fx:id="cbProd" layoutX="226.0" layoutY="87.0" prefWidth="180.0" />
+      <Label fx:id="lbProductocb" layoutX="139.0" layoutY="87.0" text="Producto:" />
+   </children>
+</AnchorPane>

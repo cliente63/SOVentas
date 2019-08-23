@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="lbProducto" prefHeight="518.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="so.ventas.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <Button id="btnVender" fx:id="btnVender" layoutX="538.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handlebtnVenderAction" text="Vender" />
+        <Label fx:id="lbTitulo" layoutX="299.0" layoutY="14.0" text="VENTAS">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <TextField id="txtCantidad" fx:id="txtCantidad" layoutX="375.0" layoutY="60.0" onMouseClicked="#handletxtCantidadAction" />
+        <Label fx:id="lbProductos" layoutX="81.0" layoutY="64.0" text="Producto:" />
+        <TableView fx:id="tbVentas" layoutX="95.0" layoutY="104.0" prefHeight="285.0" prefWidth="429.0">
+            <columns>
+                <TableColumn fx:id="cmProducto" prefWidth="168.0" text="Producto" />
+                <TableColumn fx:id="cmPrecio" minWidth="0.0" prefWidth="79.0" text="Precio" />
+                <TableColumn fx:id="cmCantidad" prefWidth="91.0" text="Cantidad" />
+                <TableColumn fx:id="cmSubtotal" prefWidth="90.0" text="Subtotal" />
+            </columns>
+        </TableView>
+        <Label fx:id="lbTotal" layoutX="375.0" layoutY="400.0" text="Total:" />
+        <TextField fx:id="txtTotal" layoutX="417.0" layoutY="396.0" prefHeight="25.0" prefWidth="107.0" />
+        <Label fx:id="lbSubtitulo" layoutX="86.0" layoutY="421.0" text="Menu Productos">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button id="btnRegistrar" fx:id="btnRegistrar" layoutX="74.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnRegAction" text="Registrar" />
+        <Button id="btnModificar" fx:id="btnModificar" layoutX="227.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnModAction" text="Modificar" />
+        <Button id="btnEliminar" fx:id="btnEliminar" layoutX="376.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnElimAction" text="Eliminar" />
+        <Button id="btnBorrar" fx:id="btnBorrar" layoutX="305.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#handlebtnBorrarAction" text="Borrar" />
+        <Button id="btnAñadir" fx:id="btnAñadir" layoutX="555.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#handlebtnAñadirAction" text="Añadir" />
+      <Label fx:id="lbProductos1" layoutX="304.0" layoutY="64.0" text="Cantidad:" />
+      <ComboBox id="cbProductos" fx:id="cbProductos" layoutX="145.0" layoutY="60.0" onMouseClicked="#handlecbProductosAction" prefWidth="150.0" />
+      <Button id="btnConsulta" fx:id="btnConsulta" layoutX="501.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#handlebtnConsultaAction" text="Ventas" />
+      <Button id="btnIn" fx:id="btnIn" layoutX="501.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#handlebtnInAction" text="Inventario" />
+    </children>
+</AnchorPane>

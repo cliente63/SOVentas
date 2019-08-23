@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SO-Ventas.jnlp">
+  <information>
+    <title>SO-Ventas</title>
+    <vendor>Soful</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SO-Ventas.jar" size="31759" download="eager" />
+    <jar href="lib/postgresql-42.2.6.jar" size="842825" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SO-Ventas" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="so.ventas.SOVentas"  name="SO-Ventas" />
+  <update check="always"/>
+</jnlp>
