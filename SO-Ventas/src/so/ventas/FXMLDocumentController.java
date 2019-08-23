@@ -110,7 +110,7 @@ Conexion con =  new Conexion();
     
     @FXML
     public void handlebtnVenderAction(MouseEvent event) {
-        pr.vender(tbVentas,txtTotal,txtIva.getText());
+        pr.vender(tbVentas,txtTotal,"10");
     }
 
     @FXML
@@ -135,7 +135,7 @@ Conexion con =  new Conexion();
 
     @FXML
     public void handlebtnAñadirAction(MouseEvent event) {
-       pr.añadir(cmProducto,cmCantidad,cmPrecio,cmSubtotal,tbVentas,txtCantidad,cbProductos,txtTotal,txtIva);
+       pr.añadir(cmProducto,cmCantidad,cmPrecio,cmSubtotal,tbVentas,txtCantidad,cbProductos,txtTotal);
     }
 
     @FXML

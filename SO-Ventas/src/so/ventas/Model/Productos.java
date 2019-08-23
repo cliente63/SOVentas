@@ -33,7 +33,7 @@ Conexion cn=new Conexion ();
         
     }
     
-   public void añadir(TableColumn Producto,TableColumn Cantidad,TableColumn Precio,TableColumn Subtotal, TableView tab, TextField tf, ComboBox cb, TextField total,TextField iva){
+   public void añadir(TableColumn Producto,TableColumn Cantidad,TableColumn Precio,TableColumn Subtotal, TableView tab, TextField tf, ComboBox cb, TextField total){
        
        Producto.setCellValueFactory(new PropertyValueFactory<>("producto"));
        Precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
@@ -43,10 +43,10 @@ Conexion cn=new Conexion ();
        String prod=cb.getSelectionModel().getSelectedItem().toString();
        String can=tf.getText();
        String t=total.getText();
-       Float i=Float.valueOf(iva.getText())/100;
+        int i= 10;
         if(!can.equals("")){
             String pre=cn.consultarPrecio(prod);
-            Float tot=Float.valueOf(can)*Float.valueOf(pre)-(Float.valueOf(pre)*i);
+            Float tot=Float.valueOf(can)*Float.valueOf(pre)+(Float.valueOf(pre)*i/100);
             total.setText(actualizarTotal(t,tot).toString());
             
             Datos p1 = new Datos(prod,pre,can,tot.toString());
