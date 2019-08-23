@@ -4,7 +4,7 @@
  * and open the template in the editor.
 JMeter
  */
-package so.ventas;
+package so.ventas.Model;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;

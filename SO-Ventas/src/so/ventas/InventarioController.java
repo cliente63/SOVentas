@@ -5,6 +5,8 @@
  */
 package so.ventas;
 
+import so.ventas.Model.Productos;
+import so.ventas.Model.Datos2;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;

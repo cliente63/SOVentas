@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package so.ventas;
+package so.ventas.Model;
 
+import so.ventas.Model.Datos2;
+import so.ventas.Model.Datos;
+import so.ventas.Model.Conexion;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

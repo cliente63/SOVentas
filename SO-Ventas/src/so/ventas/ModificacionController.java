@@ -20,6 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import so.ventas.Model.Conexion;
 
 /**
  * FXML Controller class

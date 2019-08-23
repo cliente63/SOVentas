@@ -5,6 +5,7 @@
  */
 package so.ventas;
 
+import so.ventas.Model.Conexion;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

@@ -3,25 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package so.ventas;
+package so.ventas.Model;
 
 /**
  *
  * @author pc-22
  */
-public class Datos {
+public class Datos2 {
 
     
     private String producto;
     private String cantidad;
     private String precio;
-    private String subtotal;
 
-    public Datos(String producto, String precio,String cantidad, String subtotal) {
+    public Datos2(String producto, String precio,String cantidad) {
         this.producto=producto;
         this.cantidad=cantidad;
         this.precio=precio;
-        this.subtotal=subtotal;
     }
     
     public String getProducto() {
@@ -48,12 +46,5 @@ public class Datos {
         this.precio = precio;
     }
 
-    public String getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(String subtotal) {
-        this.subtotal = subtotal;
-    }
     
 }

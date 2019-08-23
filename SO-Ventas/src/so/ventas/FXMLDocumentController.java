@@ -5,6 +5,10 @@
  */
 package so.ventas;
 
+import so.ventas.Model.Ventas;
+import so.ventas.Model.Productos;
+import so.ventas.Model.Datos;
+import so.ventas.Model.Conexion;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
