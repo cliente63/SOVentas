@@ -46,7 +46,7 @@ Conexion cn=new Conexion ();
        Float i=Float.valueOf(iva.getText())/100;
         if(!can.equals("")){
             String pre=cn.consultarPrecio(prod);
-            Float tot=Float.valueOf(can)*Float.valueOf(pre)*i;
+            Float tot=Float.valueOf(can)*Float.valueOf(pre)-(Float.valueOf(pre)*i);
             total.setText(actualizarTotal(t,tot).toString());
             
             Datos p1 = new Datos(prod,pre,can,tot.toString());
